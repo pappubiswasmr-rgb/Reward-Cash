@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ad-services-config>
+    <custom-audiences allowAllToAccess="true" />
+    <protected-signals allowAllToAccess="true" />
+    <protected-app-signals allowAllToAccess="true" />
+    <attribution allowAllToAccess="true" />
+</ad-services-config>
