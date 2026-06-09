@@ -138,8 +138,8 @@ class MainActivity : ComponentActivity() {
     private var mInterstitialAd: InterstitialAd? = null
     private var mRewardedAd: RewardedAd? = null
 
-    private var currentInterstitialAdId = "ca-app-pub-3940256099942544/1033173712"
-    private var currentRewardedAdId = "ca-app-pub-3940256099942544/5224354917"
+    private var currentInterstitialAdId = "ca-app-pub-9642029536118170/9916554475"
+    private var currentRewardedAdId = "ca-app-pub-9642029536118170/9916554475"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -299,7 +299,7 @@ fun RewardCashDashboard(
     var showVpnWarning by remember { mutableStateOf(false) }
 
     val appConfig by userViewModel.appConfig.collectAsStateWithLifecycle(initialValue = null)
-    val currentBannerAdId = appConfig?.bannerAdUnitId ?: "ca-app-pub-3940256099942544/6300978111"
+    val currentBannerAdId = appConfig?.bannerAdUnitId ?: "ca-app-pub-9642029536118170/9916554475"
 
     fun showAdForTask(taskType: String, onAdClicked: (() -> Unit)? = null, onAdDismissed: (() -> Unit)? = null) {
         val configAd = when(taskType) {
@@ -3267,9 +3267,9 @@ fun AdminDashboard(
     var editPoints by remember { mutableStateOf("") }
     var currentAdminTab by remember { mutableStateOf("Users") }
     
-    var interstitialAdId by remember(appConfig) { mutableStateOf(appConfig?.interstitialAdUnitId ?: "ca-app-pub-3940256099942544/1033173712") }
-    var rewardedAdId by remember(appConfig) { mutableStateOf(appConfig?.rewardedAdUnitId ?: "ca-app-pub-3940256099942544/5224354917") }
-    var bannerAdId by remember(appConfig) { mutableStateOf(appConfig?.bannerAdUnitId ?: "ca-app-pub-3940256099942544/6300978111") }
+    var interstitialAdId by remember(appConfig) { mutableStateOf(appConfig?.interstitialAdUnitId ?: "ca-app-pub-9642029536118170/9916554475") }
+    var rewardedAdId by remember(appConfig) { mutableStateOf(appConfig?.rewardedAdUnitId ?: "ca-app-pub-9642029536118170/9916554475") }
+    var bannerAdId by remember(appConfig) { mutableStateOf(appConfig?.bannerAdUnitId ?: "ca-app-pub-9642029536118170/9916554475") }
 
     var pointsQuiz by remember(appConfig) { mutableStateOf((appConfig?.pointsQuiz ?: 20).toString()) }
     var pointsWatchVideo by remember(appConfig) { mutableStateOf((appConfig?.pointsWatchVideo ?: 10).toString()) }

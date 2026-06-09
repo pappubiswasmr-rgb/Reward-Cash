@@ -50,9 +50,9 @@ data class WithdrawalRequest(
 @Entity(tableName = "app_config")
 data class AppConfig(
     @PrimaryKey val id: Int = 1,
-    val interstitialAdUnitId: String = "ca-app-pub-3940256099942544/1033173712",
-    val rewardedAdUnitId: String = "ca-app-pub-3940256099942544/5224354917",
-    val bannerAdUnitId: String = "ca-app-pub-3940256099942544/6300978111",
+    val interstitialAdUnitId: String = "ca-app-pub-9642029536118170/9916554475",
+    val rewardedAdUnitId: String = "ca-app-pub-9642029536118170/9916554475",
+    val bannerAdUnitId: String = "ca-app-pub-9642029536118170/9916554475",
     val pointsQuiz: Int = 20,
     val pointsWatchVideo: Int = 10,
     val pointsAdChallenge: Int = 20,
