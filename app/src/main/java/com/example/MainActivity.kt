@@ -526,15 +526,54 @@ fun RewardCashDashboard(
                         }
                     }
                 }
-                Box(
-                    modifier = Modifier
-                        .size(40.dp)
-                        .clip(CircleShape)
-                        .background(slate200)
-                        .clickable { showInstructionsDialog = true },
-                    contentAlignment = Alignment.Center
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Icon(Icons.Outlined.Notifications, contentDescription = "Instructions", tint = slate700)
+                    // Global Points Badge
+                    Box(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(20.dp))
+                            .background(if (isDark) Color(0xFF1E293B) else Color(0xFFEEF2FF))
+                            .border(
+                                1.dp,
+                                if (isDark) Color(0xFF475569) else Color(0xFFC7D2FE),
+                                RoundedCornerShape(20.dp)
+                            )
+                            .clickable {
+                                currentTab = "Wallet"
+                            }
+                            .padding(horizontal = 12.dp, vertical = 6.dp)
+                    ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(4.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Filled.Star,
+                                contentDescription = "Points",
+                                tint = Color(0xFFF59E0B),
+                                modifier = Modifier.size(16.dp)
+                            )
+                            Text(
+                                text = "৳ $points",
+                                color = if (isDark) Color.White else indigo700,
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+
+                    Box(
+                        modifier = Modifier
+                            .size(40.dp)
+                            .clip(CircleShape)
+                            .background(slate200)
+                            .clickable { showInstructionsDialog = true },
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Icon(Icons.Outlined.Notifications, contentDescription = "Instructions", tint = slate700)
+                    }
                 }
             }
 
